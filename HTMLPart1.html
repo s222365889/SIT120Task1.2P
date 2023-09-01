@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        @media (max-width:800px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media (min-width:801px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        img {
+            width: 50%
+        }
+
+        .less-then-600 {
+            display: block;
+        }
+
+        @media (min-width:600px) {
+            .less-then-600 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>If your screen colour is blue it has been detected you have a screen width of 800px or less.</p>
+    <p>If your screen colour is yellow it has been detected you have a screen width of 801px or more.</p>
+
+    <p>The following image will aways be at 50% of your screen size.</p>
+    <img src="image1.png" alt="An image at 50% of your screen size!" />
+
+    <p class="less-then-600">Your screen width is less then 600px!</p>
+</body>

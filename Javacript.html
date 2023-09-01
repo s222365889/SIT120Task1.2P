@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript Task</title>
+    <style>
+        .standout {
+            font-weight:bold;
+        }
+
+        .newmethod {
+            font-weight:bold;
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="newmethod">String Methods! Using "WELCOME to sit120"</p>
+
+    <p class="standout">Uppercase:</p>
+    <p id="string" />
+    <script>
+        let string = "WELCOME to sit120";
+        let upperString = string.toUpperCase();
+        document.getElementById("string").innerHTML = upperString;
+    </script>
+
+    <p class="standout">Lowercase:</p>
+    <p id="string1" />
+    <script>
+        let lowerString = string.toLowerCase();
+        document.getElementById("string1").innerHTML = lowerString;
+    </script>
+
+    <p class="standout">Character at 5th position:</p>
+    <p id="string2" />
+    <script>
+        let char = string.charAt(5);
+        document.getElementById("string2").innerHTML = char;
+    </script>
+
+    <p class="standout">Index of "sit120"</p>
+    <p id="string3" />
+    <script>
+        let index = string.indexOf("sit120");
+        document.getElementById("string3").innerHTML = index;
+    </script>
+
+    <p class="standout">Characters between index of 6-12:</p>
+    <p id="string4" />
+    <script>
+        let substring = string.substring(6, 12);
+        document.getElementById("string4").innerHTML = substring;
+    </script>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <p class="newmethod">Number Methods! Using "12.3456789"</p>
+
+    <p class="standout">To 2 decimal place:</p>
+    <p id="num" />
+    <script>
+        let num = 12.3456789;
+        let twodeci = num.toFixed(2);
+        document.getElementById("num").innerHTML = twodeci;
+    </script>
+
+    <p class="standout">Precise to 5 digits:</p>
+    <p id="num1" />
+    <script>
+        let precise = num.toPrecision(5);
+        document.getElementById("num1").innerHTML = precise;
+    </script>
+
+    <p class="standout">Number to string:</p>
+    <p id="num2" />
+    <script>
+        let stringnum = num.toString();
+        document.getElementById("num2").innerHTML = stringnum;
+    </script>
+
+    <p class="standout">To float type from string:</p>
+    <p id="num3" />
+    <script>
+        let toFloat = parseFloat(stringnum);
+        document.getElementById("num3").innerHTML = toFloat;
+    </script>
+
+    <p class="standout">Random decimal number between 0-1:</p>
+    <p id="num4" />
+    <script>
+        let randomnum = Math.random();
+        document.getElementById("num4").innerHTML = randomnum;
+    </script>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <p class="newmethod">Array Methods! Using "red, blue, black" and "yellow".... and numbers</p>
+
+    <p class="standout">Pushing "yellow" into the array:</p>
+    <p id="array" />
+    <script>
+        let colours = ["red", "blue", "black"];
+        colours.push("yellow");
+        document.getElementById("array").innerHTML = colours;
+    </script>
+
+    <p class="standout">Popping "yellow" off the array:</p>
+    <p id="array1" />
+    <script>
+        colours.pop();
+        document.getElementById("array1").innerHTML = colours;
+    </script>
+
+    <p class="standout">Display using joined for nicer formatting:</p>
+    <p id="array2" />
+    <script>
+        let joinedBy = colours.join(" / ");
+        document.getElementById("array2").innerHTML = joinedBy;
+    </script>
+
+    <p class="standout">Sliced, showing index 1-2:</p>
+    <p id="array3" />
+    <script>
+        let coloursWithYellow = ["red", "blue", "black", "yellow"];
+        let slicedArray = coloursWithYellow.slice(1, 3);
+        document.getElementById("array3").innerHTML = slicedArray;
+    </script>
+
+    <p class="standout">Show the index of 5 in "1,2,3,4,5,6,7,8,9":</p>
+    <p id="array4" />
+    <script>
+        let numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let indexOf5 = numArray.indexOf(5);
+        document.getElementById("array4").innerHTML = indexOf5;
+    </script>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <p class="newmethod">Date Methods!</p>
+
+    <p class="standout">Current year:</p>
+    <p id="date" />
+    <script>
+        let date = new Date();
+        let thisYear = date.getFullYear();
+        document.getElementById("date").innerHTML = thisYear;
+    </script>
+
+    <p class="standout">Current month:</p>
+    <p id="date1" />
+    <script>
+        let thisMonth = date.getMonth();
+        thisMonth += 1;
+        document.getElementById("date1").innerHTML = thisMonth;
+    </script>
+
+    <p class="standout">Current day of month:</p>
+    <p id="date2" />
+    <script>
+        let currentDay = date.getDate();
+        document.getElementById("date2").innerHTML = currentDay;
+    </script>
+
+    <p class="standout">Current day of week (as index):</p>
+    <p id="date3" />
+    <script>
+        let dayOfWeek = date.getDay();
+        document.getElementById("date3").innerHTML = dayOfWeek;
+    </script>
+
+    <p class="standout">Current hour:</p>
+    <p id="date4" />
+    <script>
+        let currentHour = date.getHours();
+        document.getElementById("date4").innerHTML = currentHour;
+    </script>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <p class="newmethod">Functions!</p>
+
+    <p class="standout">Function taking a parameter:</p>
+    <p id="func" />
+    <script>
+        function helloName(name) {
+            document.getElementById("func").innerHTML = "Hey " + name + "!";
+        }
+
+        helloName("Craig");
+    </script>
+
+    <p class="standout">Function returning a value from addition:</p>
+    <p id="func1" />
+    <script>
+        function addition(x, y) {
+            return x + y;
+        }
+
+        let returnValue = addition(10, 3);
+        document.getElementById("func1").innerHTML = returnValue;
+    </script>
+</body>
